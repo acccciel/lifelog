@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ===== Tailwind v4 主题扩展 ===== */
+@theme {
+  /* Y2K 梦幻配色 */
+  --color-pink-light: #FFB5C2;
+  --color-pink-medium: #FFC8D6;
+  --color-pink-deep: #FF8FA3;
+  --color-mint-light: #B5EAD7;
+  --color-mint-medium: #C7F0DB;
+  --color-ice-light: #B5D8EB;
+  --color-ice-medium: #C7E4F5;
+  --color-cream-light: #FFF0DB;
+  --color-cream-medium: #FFF5E6;
+  --color-lavender-light: #D4B5E8;
+  --color-lavender-medium: #E0C7F0;
+  --color-star-yellow: #FFE066;
+  --color-text-primary: #2D3436;
+  --color-text-secondary: #636E72;
+}
+
+/* ===== 全局基础样式 ===== */
+body {
+  background: linear-gradient(135deg, #FFF5F5 0%, #F0FFF4 50%, #F0F8FF 100%);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 手机壳居中容器 ===== */
+.mobile-frame {
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 40px rgba(255, 181, 194, 0.15);
+  position: relative;
+}
+
+/* ===== 卡片公共样式 ===== */
+.card-y2k {
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.card-y2k:active {
+  transform: scale(0.97);
+}
+
+/* ===== 毛玻璃效果 ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ===== 高亮星星动画 ===== */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.star-highlight {
+  animation: twinkle 2s ease-in-out infinite;
+}
