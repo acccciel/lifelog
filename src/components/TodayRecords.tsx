@@ -6,7 +6,7 @@ import { getTimeFromISO } from "@/lib/services";
 interface RecordItem {
   id: number;
   recorded_at: string;
-  [key: string]: unknown;
+  [key: string]: any;
 }
 
 interface TodayRecordsProps {
