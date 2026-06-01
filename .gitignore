@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/   # 注释掉 out 目录，Gitee Pages 需要提交静态文件
 
 # production
 /build
